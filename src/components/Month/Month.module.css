@@ -1,0 +1,17 @@
+.container {
+    width: 400px;
+    text-align: center;
+}
+
+.container_month {
+    flex: 1 1 0%;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+.days > ul {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    list-style: none;
+}

@@ -1,0 +1,13 @@
+.calendar_header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.calendar_header > h1 {
+    margin-right: 2.5rem;
+}
+
+.btn_today {
+    border-bottom: solid 2px red;
+}

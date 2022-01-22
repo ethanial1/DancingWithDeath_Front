@@ -14,9 +14,9 @@ const CalendarHeader = () => {
     const handleReset = () => setMonthIndex(dayjs().month());
 
     return (
-        <header>
+        <header className={st.calendar_header}>
             <h1>Calendar</h1>
-            <button onClick={handleReset}>
+            <button onClick={handleReset} className={st.btn_today}>
                 <span>Today</span>
             </button>
             <button onClick={handlePrevMonth}>
