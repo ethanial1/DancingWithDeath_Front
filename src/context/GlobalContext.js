@@ -2,10 +2,10 @@ import React from "react";
 
 const  GLOBAL_CONTEXT = React.createContext(
     {   
-        date: "",
+        fecha: {},
         monthIndex: 0,
         setMonthIndex: (index) => {},
-        setDate: (date) => {}
+        setFecha: (date) => {}
     }
 )
 
