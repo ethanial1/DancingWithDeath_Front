@@ -15,7 +15,6 @@ function App() {
     setCurrentMonth(getMonth(monthIndex));
     
   }, [monthIndex]);
-  
 
   return (
     <div className="App">
