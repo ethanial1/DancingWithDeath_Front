@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loader from '../Loader/Loader';
 import HourCard from './HourCard';
 
 import st from './Hours.module.css'
@@ -38,7 +39,13 @@ const HoursContainer = ({fecha}) => {
     return (
         <div className={st.contenedor}>
             { 
-                !loading ? horas.map((hora, index) => <HourCard key={index} hora={hora}/>) : <div>cargando</div>
+                !loading ?(
+                    <div style={{marginTop: "1rem", padding: "10px"}}>
+                        {
+                            horas.map((hora, index) => <HourCard key={index} hora={hora}/>) 
+                        }
+                    </div>
+                ): <Loader />
             }
             {error && <div>Ocurrio un error</div>}
         </div>

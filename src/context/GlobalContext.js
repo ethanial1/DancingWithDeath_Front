@@ -3,9 +3,11 @@ import React from "react";
 const  GLOBAL_CONTEXT = React.createContext(
     {   
         fecha: {},
+        hora: "",
         monthIndex: 0,
         setMonthIndex: (index) => {},
-        setFecha: (date) => {}
+        setFecha: (date) => {},
+        setHora: (hora) => {}
     }
 )
 

@@ -1,10 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 import GLOBAL_CONTEXT from '../../context/GlobalContext';
 
 const Day = ({day}) => {
 
+    const [disabled, setDisabled] = useState(false);
     const { setFecha } = useContext(GLOBAL_CONTEXT);
+
+    const dayOfWeek = day.get("day");
+
+    useEffect(() => {
+        if(dayOfWeek === 0 || dayOfWeek === 6) {
+            setDisabled(true)
+        }
+    }, []);
+    
 
     const getCurrentDay = () => {
         return day.format('DD-MM-YY') === dayjs().format('DD-MM-YY') ? 'current_day' : '';
@@ -20,7 +30,7 @@ const Day = ({day}) => {
 
     return (
         <div>
-            <button onClick={setDateSelected}>
+            <button onClick={setDateSelected} disabled={disabled}>
                 <span className={`${getCurrentDay()}`} >{day.format("DD")}</span>
             </button>
         </div>

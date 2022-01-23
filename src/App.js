@@ -9,7 +9,7 @@ import { getMonth } from "./helpers/utils";
 
 function App() {
   const [currentMonth, setCurrentMonth] = useState(getMonth());
-  const { monthIndex, fecha } = useContext(GLOBAL_CONTEXT);
+  const { monthIndex, fecha, hora } = useContext(GLOBAL_CONTEXT);
 
   useEffect(() => {
     setCurrentMonth(getMonth(monthIndex));
@@ -26,7 +26,7 @@ function App() {
             <Month month={currentMonth}/>
             <HoursContainer fecha={fecha}/>
           </div>
-          <CreateAppointment />
+          <CreateAppointment fecha={fecha} hora={hora}/>
         </div>
 
       </div>
