@@ -7,6 +7,10 @@
     border-top: 3px solid hsl(0, 78%, 62%);
 }
 
+.box span {
+    display: block;
+}
+
 .btn {
     min-width: 130px;
     height: 40px;

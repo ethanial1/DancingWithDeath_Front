@@ -20,6 +20,8 @@ function App() {
   return (
     <div className="App">
       <div className="vista">
+        <h2>Dancing with Death</h2>
+        <p>App for scheduling appointments to have a dance with Death</p>
         <CalendarHeader />
         <div className="container_row">
           <div>
